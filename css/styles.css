@@ -19,12 +19,12 @@
 
 @keyframes wheel1_move {
     0%{left:145px;}
-    100%{left:1068px;}
+    100%{left:1213px;}
 }
 
 @keyframes wheel2_move {
     0%{left:24px;}
-    100%{left:1068px;}
+    100%{left:1092px;}
 }
 
 .main{
@@ -49,6 +49,7 @@
     -webkit-animation: animatedBackground 3s linear 3 reverse;
     position: relative;
     z-index:-2;
+    animation-delay: 2s;
 }
 
 .car {
@@ -64,37 +65,63 @@
     animation: carrunning 9s linear 1;
     -webkit-animation: carrunning 9s linear 1;
     animation-fill-mode: forwards;
+    animation-delay: 2s;
 }
 
 .wheel1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 33px;
+    height: 33px;
+    background: url(../img/wheel.png) repeat-x 0 0;
+    background-size: contain;
+    z-index: 4;
+    -webkit-animation: infinite-spinning 0.5s linear 18;
+    animation: infinite-spinning 0.5s linear 18;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+.wheel2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 33px;
+    height: 33px;
+    background: url(../img/wheel.png) repeat-x 0 0;
+    background-size: contain;
+    z-index: 4;
+    -webkit-animation: infinite-spinning 0.5s linear 18;
+    animation: infinite-spinning 0.5s linear 18;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+.move1{
     position: relative;
     top: -105px;
     left: 145px;
     box-sizing: border-box;
     width: 33px;
     height: 33px;
-    background: url(../img/wheel.png) repeat-x 0 0;
-    background-size: contain;
-    z-index: 4;
-    -webkit-animation:infinite-spinning 0.5s linear 18;
-    animation:infinite-spinning 0.5s linear 18;
     -webkit-animation: wheel1_move 9s linear 1;
     animation: wheel1_move 9s linear 1;
-
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
 }
 
-.wheel2 {
+.move2{
     position: relative;
     top: -136px;
     left: 24px;
     box-sizing: border-box;
     width: 33px;
     height: 33px;
-    background: url(../img/wheel.png) repeat-x 0 0;
-    background-size: contain;
-    z-index: 4;
-    -webkit-animation:infinite-spinning 0.5s linear 18;
-    animation:infinite-spinning 0.5s linear 18;
     -webkit-animation: wheel2_move 9s linear 1;
     animation: wheel2_move 9s linear 1;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
 }
