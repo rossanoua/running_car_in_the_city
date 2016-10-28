@@ -27,6 +27,15 @@
     100%{left:1092px;}
 }
 
+@keyframes spoiler_move {
+    0%{top:-181px; left:0px;}
+    9%{top:-203px; left:0px;}
+    50%{top:-203px; left:434px;}
+    99%{top:-203px; left:950px;}
+    100%{top:-203px; left:1066px;}
+
+}
+
 .main{
     box-sizing: border-box;
     margin: 20px auto;
@@ -49,7 +58,7 @@
     -webkit-animation: animatedBackground 3s linear 3 reverse;
     position: relative;
     z-index:-2;
-    animation-delay: 2s;
+    animation-delay: 4s;
 }
 
 .car {
@@ -65,7 +74,7 @@
     animation: carrunning 9s linear 1;
     -webkit-animation: carrunning 9s linear 1;
     animation-fill-mode: forwards;
-    animation-delay: 2s;
+    animation-delay: 4s;
 }
 
 .wheel1 {
@@ -81,7 +90,7 @@
     -webkit-animation: infinite-spinning 0.5s linear 18;
     animation: infinite-spinning 0.5s linear 18;
     animation-fill-mode: forwards;
-    animation-delay: 2s;
+    animation-delay: 4s;
 }
 
 .wheel2 {
@@ -97,7 +106,7 @@
     -webkit-animation: infinite-spinning 0.5s linear 18;
     animation: infinite-spinning 0.5s linear 18;
     animation-fill-mode: forwards;
-    animation-delay: 2s;
+    animation-delay: 4s;
 }
 
 .move1{
@@ -110,7 +119,7 @@
     -webkit-animation: wheel1_move 9s linear 1;
     animation: wheel1_move 9s linear 1;
     animation-fill-mode: forwards;
-    animation-delay: 2s;
+    animation-delay: 4s;
 }
 
 .move2{
@@ -123,7 +132,7 @@
     -webkit-animation: wheel2_move 9s linear 1;
     animation: wheel2_move 9s linear 1;
     animation-fill-mode: forwards;
-    animation-delay: 2s;
+    animation-delay: 4s;
 }
 
 .smoke{
@@ -139,4 +148,9 @@
     height: 28px;
     background: url(../img/spoiler.png) no-repeat 0 0;
     background-size: contain;
+    -webkit-animation: spoiler_move 9s linear 1;
+    animation: spoiler_move 9s linear 1;
+    animation-fill-mode: forwards;
+    animation-delay: 3.2s;
 }
+
