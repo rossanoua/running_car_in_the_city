@@ -75,7 +75,7 @@
     box-sizing: border-box;
     width: 33px;
     height: 33px;
-    background: url(../img/wheel.png) repeat-x 0 0;
+    background: url(../img/nice_wheel.png) no-repeat 0 0;
     background-size: contain;
     z-index: 4;
     -webkit-animation: infinite-spinning 0.5s linear 18;
@@ -91,7 +91,7 @@
     box-sizing: border-box;
     width: 33px;
     height: 33px;
-    background: url(../img/wheel.png) repeat-x 0 0;
+    background: url(../img/nice_wheel.png) no-repeat 0 0;
     background-size: contain;
     z-index: 4;
     -webkit-animation: infinite-spinning 0.5s linear 18;
@@ -124,4 +124,19 @@
     animation: wheel2_move 9s linear 1;
     animation-fill-mode: forwards;
     animation-delay: 2s;
+}
+
+.smoke{
+
+}
+
+.spoiler {
+    position: relative;
+    top: -181px;
+    left: 0px;
+    box-sizing: border-box;
+    width: 34px;
+    height: 28px;
+    background: url(../img/spoiler.png) no-repeat 0 0;
+    background-size: contain;
 }
