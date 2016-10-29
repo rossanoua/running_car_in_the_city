@@ -28,18 +28,82 @@
 }
 
 @keyframes spoiler_up {
-    0%{top:-181px; left:0;}
-    50%{top:-203px; left:0;}
-    75%{top:-203px; left:0;visibility: hidden;}
-    100%{top:-203px; left:0; visibility: hidden;}
+    0%{top:-202px; left:0;visibility: visible;}
+    50%{top:-223px; left:0;}
+    75%{top:-223px; left:0;visibility: hidden;}
+    100%{top:-223px; left:0; visibility: hidden;}
 
 }
 
 @keyframes spoiler_move {
-    0%{top:-230px; left:0; visibility: visible;}
-    100%{top: -230px;
-        left: 1068px;
-        visibility: visible;}
+    0%{top:-251px; left:0; visibility: visible;}
+    100%{top: -251px;left: 1068px;visibility: visible;}
+}
+
+@keyframes smoke {
+    0%{top:-167px; left:2px; opacity: 0;}
+    25%{top:-167px; left:-22px; opacity: 1;}
+    26%{top:-167px; left:2px; opacity: 0;}
+    50%{top:-167px; left:-22px; opacity: 1;}
+    52%{top:-167px; left:2px; opacity: 0;}
+    99%{top:-177px; left:-32px; opacity: 1;}
+    100%{top:-177px; left:-12px; opacity: 0;}
+}
+
+@keyframes fire_blink {
+    0%{top:-227px;left:-19px; opacity: 0;}
+    5%{top:-227px;left:34px;opacity: 1;}
+    10%{top:-227px;left:88px;opacity: 0;}
+    15%{top:-227px;left:142px;opacity: 1;}
+    20%{top:-227px;left:196px;opacity: 0;}
+    25%{top:-227px;left:250px;opacity: 1;}
+    30%{top:-227px;left:304px;opacity: 0;}
+    35%{top:-227px;left:358px;opacity: 1;}
+    40%{top:-227px;left:412px;opacity: 0;}
+    45%{top:-227px;left:466px;opacity: 1;}
+    50%{top:-227px;left:520px;opacity: 0;}
+    55%{top:-227px;left:574px;opacity: 1;}
+    60%{top:-227px;left:628px;opacity: 0;}
+    65%{top:-227px;left:682px;opacity: 1;}
+    70%{top:-227px;left:736px;opacity: 0;}
+    75%{top:-227px;left:790px;opacity: 1;}
+    80%{top:-227px;left:844px;opacity: 0;}
+    85%{top:-227px;left:898px;opacity: 1;}
+    90%{top:-227px;left:952px;opacity: 0;}
+    95%{top:-227px;left:1006px;opacity: 1;}
+    100%{top:-227px;left:1047px;opacity: 0;}
+}
+
+@keyframes fire_start {
+    0%{opacity: 0;}
+    9%{opacity: 0;}
+    10%{opacity: 1;}
+    11%{opacity: 0;}
+    19%{opacity: 0;}
+    20%{opacity: 1;}
+    21%{opacity: 0;}
+    29%{opacity: 0;}
+    30%{opacity: 1;}
+    31%{opacity: 0;}
+    39%{opacity: 0;}
+    40%{opacity: 1;}
+    41%{opacity: 0;}
+    49%{opacity: 0;}
+    50%{opacity: 1;}
+    51%{opacity: 0;}
+    59%{opacity: 0;}
+    60%{opacity: 1;}
+    61%{opacity: 0;}
+    69%{opacity: 0;}
+    70%{opacity: 1;}
+    71%{opacity: 0;}
+    79%{opacity: 0;}
+    80%{opacity: 1;}
+    81%{opacity: 0;}
+    89%{opacity: 0;}
+    90%{opacity: 1;}
+    91%{opacity: 0;}
+    100%{opacity: 0;}
 }
 
 .main{
@@ -48,6 +112,8 @@
     width: 1263px;
     height: 342px;
     position: relative;
+    /*top:10px;*/
+    /*left:30px;*/
 }
 
 .wrapper {
@@ -141,13 +207,9 @@
     animation-delay: 4s;
 }
 
-.smoke{
-
-}
-
 .spoiler {
     position: relative;
-    top: -181px;
+    top: -202px;
     left: 0px;
     box-sizing: border-box;
     width: 34px;
@@ -158,12 +220,13 @@
     animation: spoiler_up 2s linear 1;
     animation-fill-mode: forwards;
     animation-delay: 2.5s;
+    z-index: 3;
 }
 
 .spoiler_move{
     visibility: hidden;
     position: relative;
-    top:-203px;
+    top:-251px;
     left:0;
     box-sizing: border-box;
     width: 34px;
@@ -174,8 +237,55 @@
     animation: spoiler_move 9s linear 1;
     animation-fill-mode: forwards;
     animation-delay: 4s;
+    z-index:3;
 }
 
-.smoke{
+.smoke {
+    position: relative;
+    top: -167px;
+    left: 2px;
+    box-sizing: border-box;
+    width: 23px;
+    height: 21px;
+    background: url(../img/smoke.png) no-repeat 0 0;
+    background-size: contain;
+    -webkit-animation: smoke 2s linear 1;
+    animation: smoke 2s linear 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+    z-index: -2;
 
+}
+
+.fire {
+    position: relative;
+    opacity: 0;
+    top: -227px;
+    left: -19px;
+    box-sizing: border-box;
+    width: 23px;
+    height: 4px;
+    background: url(../img/fire.png) no-repeat 0 0;
+    background-size: contain;
+    -webkit-animation: fire_blink 9s linear 1;
+    animation: fire_blink 9s linear 1;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+    z-index: 4;
+}
+
+.fire_start {
+    position: relative;
+    top: -235px;
+    left: -57px;
+    box-sizing: border-box;
+    width: 61px;
+    height: 11px;
+    background: url(../img/fire.png) no-repeat 0 0;
+    background-size: contain;
+    -webkit-animation: fire_start 2s linear 1;
+    animation: fire_start 2s linear 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+    z-index: 4;
 }
