@@ -27,13 +27,19 @@
     100%{left:1092px;}
 }
 
-@keyframes spoiler_move {
-    0%{top:-181px; left:0px;}
-    9%{top:-203px; left:0px;}
-    50%{top:-203px; left:434px;}
-    99%{top:-203px; left:950px;}
-    100%{top:-203px; left:1066px;}
+@keyframes spoiler_up {
+    0%{top:-181px; left:0;}
+    50%{top:-203px; left:0;}
+    75%{top:-203px; left:0;visibility: hidden;}
+    100%{top:-203px; left:0; visibility: hidden;}
 
+}
+
+@keyframes spoiler_move {
+    0%{top:-230px; left:0; visibility: visible;}
+    100%{top: -230px;
+        left: 1068px;
+        visibility: visible;}
 }
 
 .main{
@@ -148,9 +154,28 @@
     height: 28px;
     background: url(../img/spoiler.png) no-repeat 0 0;
     background-size: contain;
+    -webkit-animation: spoiler_up 2s linear 1;
+    animation: spoiler_up 2s linear 1;
+    animation-fill-mode: forwards;
+    animation-delay: 2.5s;
+}
+
+.spoiler_move{
+    visibility: hidden;
+    position: relative;
+    top:-203px;
+    left:0;
+    box-sizing: border-box;
+    width: 34px;
+    height: 28px;
+    background: url(../img/spoiler.png) no-repeat 0 0;
+    background-size: contain;
     -webkit-animation: spoiler_move 9s linear 1;
     animation: spoiler_move 9s linear 1;
     animation-fill-mode: forwards;
-    animation-delay: 3.2s;
+    animation-delay: 4s;
 }
 
+.smoke{
+
+}
