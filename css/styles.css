@@ -108,7 +108,7 @@
 
 .main{
     box-sizing: border-box;
-    margin: 20px auto;
+    margin: 20px 80px;
     width: 1263px;
     height: 342px;
     position: relative;
@@ -136,7 +136,7 @@
 .car {
     position: relative;
     top: -77px;
-    left: 0px;
+    left: 0;
     box-sizing: border-box;
     width: 194px;
     height: 49px;
